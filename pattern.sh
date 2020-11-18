@@ -27,3 +27,12 @@ then
 else
 	echo "no"
 fi
+
+read -p "enter password format:" password
+passwordpat="^[A-Z]{1}[a-zA-Z0-9#@\$&]{7}+$"
+if (( $password == $passwordpat ))
+then
+	echo "yes"
+else
+	echo "no"
+fi
