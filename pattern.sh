@@ -29,7 +29,7 @@ else
 fi
 
 read -p "enter password format:" password
-passwordpat="^[A-Z]{1}[a-zA-Z0-9#@\$&]{7}+$"
+passwordpat="^(?=.{8,}$)(?=.*\d)(?=.*[A-Z])[a-zA-z0-9]*[\@\#\$\^\&][a-zA-Z0-9]*$"
 if (( $password == $passwordpat ))
 then
 	echo "yes"
